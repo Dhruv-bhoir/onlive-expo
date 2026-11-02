@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OnLive Expo – walk the expo, meet the company</title>
+<meta name="description" content="A walkable online expo. Companies get a booth, their products on stage and direct leads, from ₹499 a month.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@500&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="scene" class="scene" aria-hidden="true"><div id="cam"><div id="lawn"></div><div id="ground"></div></div><div class="haze"></div></div>
+
+<div id="loader"><div class="ld-badge"><b>OnLive</b>Expo</div><div class="ld-bar"><i></i></div><p>Setting up the expo ground</p></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="index.html" aria-label="OnLive Expo home"><span class="logo-mark"></span>OnLive<b>Expo</b></a>
+  <nav>
+    <button data-open="plans">Plans</button>
+    <button data-open="partner">Anchor partners</button>
+    <a href="evaluation.html">Idea review</a>
+    <button class="btn-sm" data-open="builder">List your company</button>
+  </nav>
+</header>
+
+<section id="hero" class="hero">
+  <div class="hero-card">
+    <p class="eyebrow">Open every day · No stall, no freight, no travel</p>
+    <h1><span>Walk the expo.</span><span>Meet the company.</span></h1>
+    <p class="lede">A real expo ground you can walk through. Companies stand their products on stage, visitors collect stamps and send enquiries that land straight in the company’s inbox.</p>
+    <div class="cta">
+      <button class="btn primary" id="enter">Enter the expo <i>→</i></button>
+      <button class="btn" data-open="builder">Put my company in</button>
+    </div>
+    <ul class="facts">
+      <li><b>₹499</b><span>booth per month</span></li>
+      <li><b>90 days</b><span>free for founding exhibitors</span></li>
+      <li><b>12 plots</b><span>in this demo hall</span></li>
+    </ul>
+  </div>
+  <p class="hero-note">Sample exhibitors only · the hall behind this card is live</p>
+</section>
+
+<div id="hud" class="hud hidden">
+  <div class="hud-tl">
+    <div class="chip brand"><span class="logo-mark"></span>OnLive<b>Expo</b></div>
+    <button class="chip btn-x" id="exit">Leave expo</button>
+    <div class="quests card" id="quests"></div>
+  </div>
+  <div class="hud-tr">
+    <div class="score card"><span class="rank" id="rank">Visitor</span><b id="pts">0</b><small>pts</small></div>
+    <div class="tools">
+      <button class="tool" data-open="passport"><span>Passport</span><b id="stampCount">0/9</b></button>
+      <button class="tool" data-open="directory"><span>Directory</span></button>
+      <button class="tool" data-open="plans"><span>Plans</span></button>
+      <button class="tool hot" data-open="builder"><span>List my company</span></button>
+    </div>
+  </div>
+  <div class="hud-bl card hint" id="hint"><b>Move</b> WASD / arrows or tap the floor <b>Enter booth</b> E or click it</div>
+  <div class="prompt" id="prompt"></div>
+  <div class="hud-br"><div class="minimap card" id="minimap"></div></div>
+</div>
+
+<aside id="panel" class="panel" aria-live="polite"></aside>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="mbox" id="mbox"></div></div>
+<div id="toast" role="status"></div>
+<div id="confetti"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/gsap-fallback.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
